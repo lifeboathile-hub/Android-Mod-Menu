@@ -18,6 +18,9 @@
 #include "Menu/Jni.hpp"
 #include "Includes/Macros.h"
 #include "dobby.h"
+#ifndef OBFUSATE
+#define OBFUSATE(x) x
+#endif
 
 int scoreMul = 1, coinsMul = 1;
 
