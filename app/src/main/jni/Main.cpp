@@ -31,52 +31,34 @@ jobjectArray GetFeatureList(JNIEnv *env, jobject context) {
     jobjectArray ret;
 
     const char *features[] = {
-            OBFUSCATE("Toggle_No death"),
-            OBFUSCATE("Button_Start Invcibility (30 sec duration)"),
-            OBFUSCATE("SeekBar_Score multiplier_1_100"),
-            OBFUSCATE("SeekBar_Coins multiplier_1_1000"),
-            OBFUSCATE("Category_Examples"), //Not counted
-            OBFUSCATE("Toggle_The toggle"),
-            OBFUSCATE(
-                    "100_Toggle_True_The toggle 2"), //This one have feature number assigned, and switched on by default
-            OBFUSCATE("110_Toggle_The toggle 3"), //This one too
-            OBFUSCATE("SeekBar_The slider_1_100"),
-            OBFUSCATE("SeekBar_Kittymemory slider example_1_5"),
-            OBFUSCATE("Spinner_The spinner_Items 1,Items 2,Items 3"),
-            OBFUSCATE("Button_The button"),
-            OBFUSCATE("ButtonLink_The button with link_https://www.youtube.com/"), //Not counted
-            OBFUSCATE("ButtonOnOff_The On/Off button"),
-            OBFUSCATE("CheckBox_The Check Box"),
-            OBFUSCATE("InputValue_Input number"),
-            OBFUSCATE("InputValue_1000_Input number 2"), //Max value
-			OBFUSCATE("1111_InputLValue_Input long number"),
-            OBFUSCATE("InputLValue_1000000000000_Input long number 2"), //Max value
-            OBFUSCATE("InputText_Input text"),
-            OBFUSCATE("RadioButton_Radio buttons_OFF,Mod 1,Mod 2,Mod 3"),
+    OBFUSATE("Category_AİMBOT AYARLARI"),
+    OBFUSATE("Toggle_Aimbot Aç/Kapa"),
+    OBFUSATE("Toggle_Triggerbot Aç/Kapa"),
+    OBFUSATE("SeekBar_Vurma Gecikmesi (Sn)_0.1_1"), // 0.1 ile 1 saniye arası tetiklenme hızı
+    OBFUSATE("SeekBar_FOV Ayarı_1_360"),
+    OBFUSATE("Toggle_FOV Göster Aç/Kapa"),
+    OBFUSATE("Toggle_Sadece En Yakındaki Rakibe Kilitlen"), // Arkadaki adama kilitlenmeyi önlemek için aç/kapa
+    
+    OBFUSATE("Category_ESP & GÖRSEL"),
+    OBFUSATE("Toggle_ESP İskelet (Skeleton)"),
+    OBFUSATE("Toggle_ESP Kutu (Box)"),
+    OBFUSATE("Toggle_ESP Çizgi (Line)"),
+    OBFUSATE("Toggle_ESP Sağlık (Health Bar)"),
+    OBFUSATE("Toggle_ESP Mesafe (Distance)"),
+    OBFUSATE("Toggle_Wallhack / Chams"),
+    OBFUSATE("Toggle_ThirdPerson (Thirdp)"),
+    
+    OBFUSATE("Category_SİLAH AYARLARI"),
+    OBFUSATE("Toggle_Sekmeme (No Recoil)"),
+    OBFUSATE("Toggle_Mermi Dağılmama (No Spread)"),
+    
+    OBFUSATE("Category_EĞLENCE / RAGE"),
+    OBFUSATE("Toggle_Mevlana Aç/Kapa"),
+    OBFUSATE("SeekBar_Mevlana Dönme Hızı_1_100"),
+    OBFUSATE("Toggle_Bunnyhop Aç/Kapa"),
+};
 
-            //Create new collapse
-            OBFUSCATE("Collapse_Collapse 1"),
-            OBFUSCATE("CollapseAdd_Toggle_The toggle"),
-            OBFUSCATE("CollapseAdd_Toggle_The toggle"),
-            OBFUSCATE("123_CollapseAdd_Toggle_The toggle"),
-            OBFUSCATE("122_CollapseAdd_CheckBox_Check box"),
-            OBFUSCATE("CollapseAdd_Button_The button"),
-
-            //Create new collapse again
-            OBFUSCATE("Collapse_Collapse 2_True"),
-            OBFUSCATE("CollapseAdd_SeekBar_The slider_1_100"),
-            OBFUSCATE("CollapseAdd_InputValue_Input number"),
-
-            OBFUSCATE("RichTextView_This is text view, not fully HTML."
-                      "<b>Bold</b> <i>italic</i> <u>underline</u>"
-                      "<br />New line <font color='red'>Support colors</font>"
-                      "<br/><big>bigger Text</big>"),
-            OBFUSCATE("RichWebView_<html><head><style>body{color: white;}</style></head><body>"
-                      "This is WebView, with REAL HTML support!"
-                      "<div style=\"background-color: darkblue; text-align: center;\">Support CSS</div>"
-                      "<marquee style=\"color: green; font-weight:bold;\" direction=\"left\" scrollamount=\"5\" behavior=\"scroll\">This is <u>scrollable</u> text</marquee>"
-                      "</body></html>")
-    };
+            
 
     int Total_Feature = (sizeof features / sizeof features[0]);
     ret = (jobjectArray)
