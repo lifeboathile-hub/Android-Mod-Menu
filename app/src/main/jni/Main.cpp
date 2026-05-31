@@ -12,6 +12,7 @@
 #include <dlfcn.h>
 #include "Includes/Logger.h"
 #include "Includes/obfuscate.h"
+#define OBFUSATE(x) x
 #include "Includes/Utils.hpp"
 #include "Menu/Menu.hpp"
 #include "Menu/Jni.hpp"
